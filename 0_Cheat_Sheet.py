@@ -1,8 +1,8 @@
-Two types of storages in Databricks
-DBFS and external mounted storage
+# Two types of storages in Databricks
+# DBFS and external mounted storage
 
 ### ------------
-DBUTILS LS command
+# DBUTILS LS command
 
 %python
 dbutils.fs.ls("dbfs:/mnt/rt_test/")
