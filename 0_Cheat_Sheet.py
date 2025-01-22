@@ -1,14 +1,14 @@
 Two types of storages in Databricks
 DBFS and external mounted storage
 
-### ------------
+### ===========================
 DBUTILS LS command
 
 %python
 dbutils.fs.ls("dbfs:/mnt/rt_test/")
 
 
-### ------------
+### ===========================
 df = spark.read.format("csv")\
             .option("header", "true")\
             .option("sep", ",")\
@@ -18,7 +18,7 @@ df = spark.read.format("csv")\
 display(df)
 
 
-### ------------ Another method of creating df and table from csv
+### ============ Another method of creating df and table from csv
 # File location and type
 file_location = "/FileStore/tables/2_employees.csv"
 file_type = "csv"
@@ -53,4 +53,9 @@ permanent_table_name = "2_employees_csv"
 df.write.format("parquet").saveAsTable(permanent_table_name)
 
 
-### ------------
+### ===========================
+fire_df = spark.read.format(") \
+            .option("headers", True) \
+            .option("inferschema", True) \
+            .load("fire_df_.csv")
+display(fire_df)
